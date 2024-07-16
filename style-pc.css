@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #121212;
+  box-sizing: border-box;
+  font-family: "Hiragino Kaku Gothic ProN";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.44rem;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  position: fixed;
+  z-index: 50;
+}
+.header .header-logo {
+  width: 175px;
+}
+.header .ham-menu {
+  display: block;
+  width: 40px;
+  height: 30px;
+  padding: 0 5px;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  position: relative;
+}
+.header .ham-menu span {
+  width: 30px;
+  height: 2px;
+  background-color: #121212;
+  position: absolute;
+  transition: transform 0.8s;
+}
+.header .ham-menu span:nth-child(1) {
+  top: 4px;
+}
+.header .ham-menu span:nth-child(2) {
+  top: 14px;
+}
+.header .ham-menu span:nth-child(3) {
+  top: 24px;
+}
+.header #ham-nav {
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #121212;
+  padding: 60px 25px;
+}
+.header #ham-nav .ham-nav-list li {
+  line-height: 1.7;
+}
+.header #ham-nav .ham-nav-list li a {
+  color: #fff;
+}
+.header #ham-nav .site-list {
+  margin-bottom: 60px;
+}
+.header #ham-nav .site-list li {
+  padding: 20px 0;
+  border-bottom: 1px solid #fff;
+}
+.header #ham-nav .site-list li:first-child {
+  border-top: 1px solid #fff;
+}
+.header #ham-nav .sns-list li {
+  padding: 5px 0;
+}
+.header .ham-menu.active span {
+  background-color: #fff;
+  transition: transform 0.8s;
+}
+.header .ham-menu.active span:nth-child(1) {
+  transform: translateY(10px) rotate(-405deg);
+}
+.header .ham-menu.active span:nth-child(2) {
+  visibility: hidden;
+}
+.header .ham-menu.active span:nth-child(3) {
+  top: 9px;
+  transform: translateY(5px) rotate(405deg);
+}
+.header #ham-nav.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hide.active {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #121212;
+  opacity: 0.85;
+}
+
+.ttl {
+  text-align: center;
+  font-size: 3.6rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+main #video video {
+  width: 100%;
+  height: calc(100vh - 80px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .pickup {
+  padding: 100px 0 50px;
+}
+main .pickup .swiper {
+  width: 100%;
+}
+main .pickup .swiper .swiper-wrapper img {
+  padding: 0 30px;
+}
+main .feature {
+  width: 100%;
+  max-width: 1208px;
+  margin: -50px auto 10px;
+}
+@media (max-width: 657px) {
+  main .feature {
+    padding: 80px 16px;
+  }
+}
+main .feature .feature-list {
+  padding: 100px 0 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px 25px;
+}
+@media (max-width: 983px) {
+  main .feature .feature-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 25px;
+  }
+}
+@media (max-width: 657px) {
+  main .feature .feature-list {
+    display: block;
+  }
+}
+main .feature .feature-list li {
+  box-shadow: 0 0 5px 5px rgb(220, 220, 220);
+}
+main .feature .feature-list li img {
+  width: 100%;
+}
+main .feature .feature-list li .feature-item-txt {
+  padding: 30px;
+}
+main .feature .feature-list li .feature-item-txt p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+main .feature .feature-list li .feature-item-txt .cate {
+  margin-bottom: 20px;
+}
+main .feature .feature-list li .feature-item-txt h2 {
+  font-size: 1.44rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+main .feature .feature-list li .feature-item-txt .data {
+  text-align: right;
+}
+
+.footer {
+  background-color: #121212;
+}
+.footer .footer-contents {
+  padding: 50px 0;
+}
+.footer .footer-contents .ttl {
+  color: #fff;
+}
+.footer .footer-contents .footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.footer .footer-contents .footer-wrapper .footer-txt {
+  width: 45%;
+}
+.footer .footer-contents .footer-wrapper .footer-txt p {
+  font-size: 1.44rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #fff;
+}
+.footer .footer-contents .footer-wrapper .footer-form {
+  width: 45%;
+}
+.footer .footer-contents .footer-wrapper .footer-form label {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: #fff;
+}
+.footer .footer-contents .footer-wrapper .footer-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.footer .footer-contents .footer-wrapper .footer-form textarea {
+  line-height: 1.8;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.footer .footer-contents .footer-wrapper .footer-form .send {
+  background-color: #121212;
+  font-size: 1.44em;
+  line-height: 1.8;
+  border: 1px solid #fff;
+  color: #fff;
+  display: block;
+  max-width: 200px;
+  width: 100%;
+  padding: 12px 0;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.footer .footer-copy {
+  text-align: center;
+}
+.footer .footer-copy p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  padding: 10px;
+  color: #fff;
+}/*# sourceMappingURL=style-pc.css.map */_
